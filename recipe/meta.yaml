@@ -30,7 +30,7 @@ requirements:
     - packaging
     - perspective
     - polars
-    - pydantic <2
+    - pydantic
     - ray-serve >=2.8
 
 test:
