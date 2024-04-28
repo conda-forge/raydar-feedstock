@@ -30,6 +30,7 @@ requirements:
     - packaging
     - perspective
     - polars
+    - pyarrow
     - pydantic
     - ray-serve >=2.8
 
