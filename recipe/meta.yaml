@@ -33,6 +33,7 @@ requirements:
     - pyarrow
     - pydantic
     - ray-serve >=2.8
+    - starlette
 
 test:
   imports:
