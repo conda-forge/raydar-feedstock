@@ -1,5 +1,5 @@
 {% set name = "raydar" %}
-{% set version = "0.2.1" %}
+{% set version = "0.2.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: dc298d9bd41351cf031640d2c50bf004dbe7a9bcd04e0e746a190ad4a4763887
+  sha256: 2808eee4810f4fcd2bc0f9fcf3c4917e2c97022dd99859f937934311c6aa5824
 
 build:
   number: 0
@@ -33,6 +33,7 @@ requirements:
     - pyarrow
     - pydantic
     - ray-serve >=2.8
+    - starlette
 
 test:
   imports:
