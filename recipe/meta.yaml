@@ -28,7 +28,7 @@ requirements:
     - coolname
     - fastapi
     - packaging
-    - perspective
+    - perspective >=2,<3
     - polars
     - pyarrow
     - pydantic
