@@ -1,5 +1,5 @@
 {% set name = "raydar" %}
-{% set version = "0.2.2" %}
+{% set version = "0.2.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 2808eee4810f4fcd2bc0f9fcf3c4917e2c97022dd99859f937934311c6aa5824
+  sha256: 5be9b63f18f820c7b1aecfd134b5d568a308c94f80d81e34af6f5a9f5c64e410
 
 build:
   number: 0
