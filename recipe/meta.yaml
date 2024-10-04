@@ -38,10 +38,11 @@ requirements:
 test:
   imports:
     - raydar
-  requires:
-    - pip
-  commands:
-    - pip check
+  # TODO reenable after perspective changes
+  # requires:
+  #   - pip
+  # commands:
+  #   - pip check
 
 about:
   home: http://github.com/point72/raydar
