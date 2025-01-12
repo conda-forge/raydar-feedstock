@@ -6,17 +6,17 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 2b63151e79c718c3e20ab6909d781e7097cb4f7a295094fb22205dcacd9742db
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - pip
     - nodejs
     - yarn
@@ -24,7 +24,7 @@ requirements:
     - hatch-jupyter-builder
     - jupyterlab >=4,<5
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - coolname
     - fastapi
     - packaging
@@ -36,6 +36,8 @@ requirements:
     - starlette
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - raydar
   # TODO reenable after perspective changes
