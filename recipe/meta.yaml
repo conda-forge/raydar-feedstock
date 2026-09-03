@@ -1,16 +1,16 @@
 {% set name = "raydar" %}
-{% set version = "0.2.4" %}
+{% set version = "0.3.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 2b63151e79c718c3e20ab6909d781e7097cb4f7a295094fb22205dcacd9742db
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 7b5d297abcaed3d699d536ff1f8b14632d3413cf5447da99c8c17e0ecb1b55f5
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
